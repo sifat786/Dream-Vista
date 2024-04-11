@@ -1,7 +1,6 @@
 
 
-
-const AuthProvider = () => {
+const Register = () => {
     return (
         <div>
             
@@ -9,4 +8,4 @@ const AuthProvider = () => {
     );
 };
 
-export default AuthProvider;
+export default Register;
