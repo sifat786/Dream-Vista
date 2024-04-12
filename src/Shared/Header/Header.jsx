@@ -22,7 +22,7 @@ const Header = () => {
 
                         <li>
                             <NavLink
-                                to="/about"
+                                to="/update"
                                 className={({ isActive }) =>
                                 isActive
                                     ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-rose-600"
@@ -34,7 +34,7 @@ const Header = () => {
 
                         <li>
                             <NavLink
-                                to="/career"
+                                to="/contact"
                                 className={({ isActive }) =>
                                 isActive
                                     ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-rose-600"
@@ -46,13 +46,13 @@ const Header = () => {
 
                         <li>
                             <NavLink
-                                to="/career"
+                                to="/faq"
                                 className={({ isActive }) =>
                                 isActive
                                     ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-rose-600"
                                     : "md:text-lg text-neutral-500 font-medium leading-[30px]"
                                 }
-                            >About Us
+                            >FAQ
                             </NavLink>
                         </li>
                       </>
@@ -66,12 +66,12 @@ const Header = () => {
                     <div  tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-0">
                         <GiHamburgerMenu className="text-xl"></GiHamburgerMenu>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content block mt-1 z-[1] p-3 shadow bg-rose-100 rounded-box w-[180px]">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content block mt-1 z-[1] p-3 shadow bg-blue-50 rounded-box w-[200px] md:w-[300px]">
                         {navLinks}
                     </ul>
                     </div>
 
-                    <Link to={'/'} className="font-bold text-2xl ml-3 md:ml-0">Dream Vista</Link>
+                    <Link to={'/'} className="font-bold text-2xl ml-3 lg:ml-0">Dream Vista</Link>
                 </div>
 
                 <div className="navbar-center hidden lg:flex">
