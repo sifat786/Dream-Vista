@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 import { useState } from "react";
 import useAuth from './../../Hooks/useAuth';
 import { toast } from "react-toastify";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -22,7 +23,15 @@ const Register = () => {
 
         //* create user:
         createUser(email, password)
-         .then(() => {
+         .then((res) => {
+            // update profile:
+            updateProfile(res.user, {
+                displayName: name,
+                photoURL: image
+            })
+             .then(console.log('profile updated'))
+             .catch(err => console.log(err))
+
              toast.success('Registration successfully done');
             setTimeout(() => {
                 navigate('/')

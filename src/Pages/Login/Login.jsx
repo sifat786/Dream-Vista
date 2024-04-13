@@ -44,9 +44,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/');
             }, 3000);
         })
-        .catch(() => {
-            toast.error('you are already logged in!');
-        })
+        .catch(err => console.log(err));
     }
 
     //* github:
@@ -58,9 +56,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/');
             }, 3000);
         })
-        .catch(() => {
-            toast.error('you are already logged in!');
-        })
+        .catch(err => console.log(err));
     }
     
     return (
