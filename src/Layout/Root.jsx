@@ -2,6 +2,7 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 import Header from '../Shared/Header/Header';
 import Footer from './../Shared/Footer/Footer';
 import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Root = () => {
@@ -15,10 +16,10 @@ const Root = () => {
             <Footer/>
 
             <ToastContainer
-                position="top-center"
-                autoClose={2000}
-                hideProgressBar={false}
-                theme="dark"
+              position="top-right"
+              autoClose={2000}
+              hideProgressBar={false}
+              theme="dark"
             />
             <ScrollRestoration />
         </div>

@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-import userDefaultPic from '../../assets/userDefaultPic.jpg';
 import { GiHamburgerMenu } from "react-icons/gi";
+import user from '../../assets/user.png';
 
 
 const Header = () => {
@@ -13,8 +13,8 @@ const Header = () => {
                                 to="/"
                                 className={({ isActive }) =>
                                 isActive
-                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-rose-600"
-                                    : "md:text-lg text-neutral-500 font-medium leading-[30px]"
+                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-blue-700"
+                                    : "md:text-lg text-black font-medium leading-[30px]"
                                 }
                             >Home
                             </NavLink>
@@ -25,8 +25,8 @@ const Header = () => {
                                 to="/update"
                                 className={({ isActive }) =>
                                 isActive
-                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-rose-600"
-                                    : "md:text-lg text-neutral-500 font-medium leading-[30px]"
+                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-blue-700"
+                                    : "md:text-lg text-black font-medium leading-[30px]"
                                 }
                             >Update Profile
                             </NavLink>
@@ -37,8 +37,8 @@ const Header = () => {
                                 to="/contact"
                                 className={({ isActive }) =>
                                 isActive
-                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-rose-600"
-                                    : "md:text-lg text-neutral-500 font-medium leading-[30px]"
+                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-blue-700"
+                                    : "md:text-lg text-black font-medium leading-[30px]"
                                 }
                             >Contact Us
                             </NavLink>
@@ -49,8 +49,8 @@ const Header = () => {
                                 to="/faq"
                                 className={({ isActive }) =>
                                 isActive
-                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-rose-600"
-                                    : "md:text-lg text-neutral-500 font-medium leading-[30px]"
+                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-blue-700"
+                                    : "md:text-lg text-black font-medium leading-[30px]"
                                 }
                             >FAQ
                             </NavLink>
@@ -71,7 +71,7 @@ const Header = () => {
                     </ul>
                     </div>
 
-                    <Link to={'/'} className="font-bold text-2xl ml-3 lg:ml-0">Dream Vista</Link>
+                    <Link to={'/'} className="font-bold text-2xl md:text-3xl ml-3 lg:ml-0">Dream <span className="text-blue-700">Vista</span></Link>
                 </div>
 
                 <div className="navbar-center hidden lg:flex">
@@ -96,11 +96,13 @@ const Header = () => {
                             </Link>
                     } */}
                     <div role="button">
-                        <div className="w-10 md:w-[60px] rounded-full">
-                            <img src={userDefaultPic}/>
+                        <div className="w-10 md:w-[47px] rounded-full">
+                            <img src={user}/>
                         </div>
                     </div>
-                    <button className="bg-black py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">SignIn</button>
+                    <Link to={'/login'}>
+                        <button className="bg-blue-700 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log In</button>
+                    </Link>
 
                 </div>
             </div>

@@ -18,9 +18,9 @@ module.exports = withMT({
       center: true,
     },
     screens: {
-      'sm': '380px',
-      'md': '700px',
-      'lg': '1280px',
+      'sm': '400px',
+      'md': '600px',
+      'lg': '1140px',
     },
 
     extend: {},

@@ -9,6 +9,7 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
     const [loader, setLoader] = useState(true);
+    const [data, setData] = useState([]);
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -53,9 +54,17 @@ const AuthProvider = ({children}) => {
         return () => unsubscribe();
     }, [])
 
+    //* api data:
+    useEffect(() => {
+        fetch('/estate.json')
+         .then(res => res.json())
+         .then(i => setData(i))
+    },[])
+
     const authInfo = {
         user,
         loader,
+        data,
         createUser,
         loginUser,
         googleLogin,
