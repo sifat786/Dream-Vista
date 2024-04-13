@@ -1,20 +1,67 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form"
+import useAuth from "../../Hooks/useAuth";
+import { toast } from "react-toastify";
 
 
 
 const Login = () => {
 
+    const {loginUser, googleLogin, githubLogin} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const location = useLocation();
+    const navigate = useNavigate();
 
-    const handleLogin = (data) => console.log(data)
+    const handleLogin = (data) => {
+        const {email, password} = data;
+
+        //* login:
+        loginUser(email, password)
+          .then(() => {
+            toast.success('login successfully done');
+            setTimeout(() => {
+                navigate(location?.state ? location.state : '/');
+            }, 3000);
+          })
+          .catch(() => {
+            toast.error('your email or password is not matched!');
+          })
+    }
+
+    //* google:
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(() => {
+            toast.success('login with Google successfully done');
+            setTimeout(() => {
+                navigate(location?.state ? location.state : '/');
+            }, 3000);
+        })
+        .catch(() => {
+            toast.error('you are already logged in!');
+        })
+    }
+
+    //* github:
+    const handleGithubLogin = () => {
+        githubLogin()
+        .then(() => {
+            toast.success('login with GitHub successfully done');
+            setTimeout(() => {
+                navigate(location?.state ? location.state : '/');
+            }, 3000);
+        })
+        .catch(() => {
+            toast.error('you are already logged in!');
+        })
+    }
     
     return (
         <div>
@@ -36,7 +83,7 @@ const Login = () => {
                             </label>
                             <input 
                                 type="text" 
-                                placeholder="email" 
+                                placeholder="Enter your email address" 
                                 className="input mb-2"
                                 {...register("email", { 
                                     required: {
@@ -73,23 +120,27 @@ const Login = () => {
                             <button className="bg-green-700 w-full py-3 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log In</button>
                         </div>
 
+                    </form>
+                    <p className="text-neutral-500 text-base font-semibold text-center">Dont’t Have An Account ?
+                    <Link to={`/register`} className="text-orange-600"> Register</Link></p>
+                        
+                        <div className="divider mt-8 ">
+                            <span className="font-medium  text-gray-500 text-sm md:text-base">Also login with</span>
+                        </div>
                         <div className="flex items-center mx-auto gap-2 mt-2">
                             <div>
-                                <button className="btn bg-black hover:bg-black md:text-xl text-white font-semibold">
+                                <button onClick={handleGoogleLogin} className="btn bg-black hover:bg-black md:text-xl text-white font-semibold">
                                     <FcGoogle/>
                                     Google
                                 </button>
                             </div>
                             <div>
-                                <button className="btn bg-black hover:bg-black md:text-xl text-white font-semibold">
+                                <button onClick={handleGithubLogin} className="btn bg-black hover:bg-black md:text-xl text-white font-semibold">
                                     <FaGithub/>
                                     GitHub
                                 </button>
                             </div>
                         </div>
-                    </form>
-                    <p className="text-neutral-500 text-base font-semibold text-center">Dont’t Have An Account ?
-                    <Link to={`/register`} className="text-orange-600"> Register</Link></p>
 
                 </div>
 

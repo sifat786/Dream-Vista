@@ -29,7 +29,7 @@ const Register = () => {
             }, 3000);
          })
          .catch(() => {
-            toast.error('Your email is already in use for registration!!!');
+            toast.error('Your email is already registered');
          })
          
     }
@@ -128,7 +128,7 @@ const Register = () => {
                             <button className="bg-green-700 w-full py-3 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Register</button>
                         </div>
                     </form>
-                    <p className="text-neutral-500 text-base font-semibold text-center mt-[10px]">Already Have An Account ?
+                    <p className="text-neutral-500 text-base font-semibold text-center mt-[10px]">Already Have an Account ?
                     <Link to={`/login`} className="text-orange-600"> Login</Link></p>
 
                 </div>
