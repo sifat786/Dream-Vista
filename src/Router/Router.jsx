@@ -7,6 +7,7 @@ import UpdateProfile from './../components/UpdateProfile/UpdateProfile';
 import FAQ from './../components/FAQ/FAQ';
 import Login from './../Pages/Login/Login';
 import Register from './../Pages/Register/Register';
+import EstateDetails from './../components/EstateDetails/EstateDetails';
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
           path: '/register',
           element: <Register/>
         },
+        {
+          path: '/estateDetails',
+          element: <EstateDetails/>
+        }
       ]
     },
 ]);

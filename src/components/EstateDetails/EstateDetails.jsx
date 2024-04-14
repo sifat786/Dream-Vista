@@ -4,7 +4,7 @@
 const EstateDetails = () => {
     return (
         <div>
-            
+            EstateDetails
         </div>
     );
 };
