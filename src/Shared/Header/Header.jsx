@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 const Header = () => {
     
-    const {user, logoutUser} = useAuth();
+    const {user, logoutUser, loader} = useAuth();
 
     const handleLogout = () => {
         logoutUser()
@@ -32,13 +32,13 @@ const Header = () => {
 
                         <li>
                             <NavLink
-                                to="/update"
+                                to="/faq"
                                 className={({ isActive }) =>
                                 isActive
                                     ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-green-700"
                                     : "md:text-lg text-black font-medium"
                                 }
-                            >Update Profile
+                            >FAQ
                             </NavLink>
                         </li>
 
@@ -54,15 +54,16 @@ const Header = () => {
                             </NavLink>
                         </li>
 
+
                         <li>
                             <NavLink
-                                to="/faq"
+                                to="/update"
                                 className={({ isActive }) =>
                                 isActive
                                     ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-green-700"
                                     : "md:text-lg text-black font-medium"
                                 }
-                            >FAQ
+                            >Update Profile
                             </NavLink>
                         </li>
                       </>
@@ -72,11 +73,11 @@ const Header = () => {
 
             <div className="navbar px-0 py-4 md:py-8">
                 <div className="navbar-start">
-                    <div className="dropdown">
+                    <div className="dropdown z-10">
                     <div  tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-0">
                         <GiHamburgerMenu className="text-xl"></GiHamburgerMenu>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content block mt-1 z-[1] p-3 shadow bg-green-50 rounded-box w-[200px] md:w-[300px]">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content block mt-1 z-[1] p-3 shadow-xl bg-gray-100 rounded-box w-[200px] md:w-[300px]">
                         {navLinks}
                     </ul>
                     </div>
@@ -91,19 +92,35 @@ const Header = () => {
                 </div>
 
                 <div className="navbar-end gap-2">
-                    <div className={user ? 'tooltip tooltip-bottom' : ''} data-tip={user ? user.displayName : ''} role="button">
-                        <div className="w-10 md:w-[47px]">
-                            <img className="rounded-full" src={user ? user.photoURL : userDefaultPic}/>
-                        </div>
-                    </div>
-                    
                     {
-                        user ? 
-                            <button onClick={handleLogout} className="bg-green-700 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log Out</button>
-                            :
-                            <Link to={'/login'}>
-                                <button className="bg-green-700 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log In</button>
-                            </Link>
+                        loader ? <div className="flex items-center gap-2">
+                                    <p className="text-3xl text-black font-semibold">Loading</p>
+                                    <span className="loading loading-bars loading-lg mr-8"></span>
+                                </div>
+
+                        :
+
+                        <>
+                            <div className={user ? 'tooltip tooltip-bottom' : ''} data-tip={user ? user.displayName : ''} role="button">
+                                <div className="w-10 md:w-[47px]">
+                                    {
+                                        user?.photoURL === null ? 
+                                        <img className="rounded-full" src={userDefaultPic}/>
+                                        :
+                                        <img className="rounded-full" src={user ? user.photoURL : userDefaultPic}/>
+                                    }
+                                </div>
+                            </div>
+                            
+                            {
+                                user ? 
+                                    <button onClick={handleLogout} className="bg-green-700 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log Out</button>
+                                    :
+                                    <Link to={'/login'}>
+                                        <button className="bg-green-700 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log In</button>
+                                    </Link>
+                            }
+                        </>
                     }
                     
 

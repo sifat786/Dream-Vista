@@ -8,6 +8,7 @@ import FAQ from './../components/FAQ/FAQ';
 import Login from './../Pages/Login/Login';
 import Register from './../Pages/Register/Register';
 import EstateDetails from './../components/EstateDetails/EstateDetails';
+import PrivateRoute from './PrivateRoute';
 
 
 
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/update',
-          element: <UpdateProfile/>
+          element: <PrivateRoute><UpdateProfile/></PrivateRoute>
         },
         {
           path: '/contact',
@@ -42,8 +43,8 @@ const router = createBrowserRouter([
           element: <Register/>
         },
         {
-          path: '/estateDetails',
-          element: <EstateDetails/>
+          path: '/estateDetails/:id',
+          element: <PrivateRoute><EstateDetails/></PrivateRoute>
         }
       ]
     },

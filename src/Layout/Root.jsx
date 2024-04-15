@@ -2,7 +2,7 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 import Header from '../Shared/Header/Header';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-// import Footer from './../Shared/Footer/Footer';
+import Footer from './../Shared/Footer/Footer';
 
 
 const Root = () => {
@@ -13,7 +13,7 @@ const Root = () => {
                 <Outlet></Outlet>
             </div>
             
-            {/* <Footer/> */}
+            <Footer/>
 
             <ToastContainer
               position="top-right"

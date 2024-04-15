@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 
 const PrivateRoute = ({children}) => {
 
-    const {user, loading} = useAuth();
+    const {user, loader} = useAuth();
     const location = useLocation();
 
-    if(loading) {
+    if(loader) {
         return (
-            <div className="flex flex-col gap-4 w-full mx-auto mt-[200px]">
+            <div className="flex flex-col gap-4 w-[70%] mb-10 mx-auto mt-[50px]">
                 <div className="skeleton h-32 w-full"></div>
                 <div className="skeleton h-4 w-28"></div>
                 <div className="skeleton h-4 w-full"></div>
@@ -25,26 +25,18 @@ const PrivateRoute = ({children}) => {
                 <div className="skeleton h-4 w-full"></div>
                 <div className="skeleton h-4 w-full"></div>
                 <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
             </div>
         )
-    } else if(user) {
+    }else if(user) {
         return children;
     } else {
-        return <Navigate to={'/login'} state={location.pathname}/>
+        return <Navigate to='/login' state={location.pathname}/>
     }
+    
 };
 
 export default PrivateRoute;
+
 
 PrivateRoute.propTypes = {
     children:PropTypes.node

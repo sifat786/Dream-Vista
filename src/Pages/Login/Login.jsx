@@ -27,7 +27,7 @@ const Login = () => {
           .then(() => {
             toast.success('login successfully done');
             setTimeout(() => {
-                navigate(location?.state ? location.state : '/');
+                navigate(location.state ? location.state : '/'); 
             }, 3000);
           })
           .catch(() => {

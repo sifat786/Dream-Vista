@@ -11,13 +11,12 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
 
-    const {createUser} = useAuth();
+    const {createUser, setReload} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, reset , formState: { errors } } = useForm();
     const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        // eslint-disable-next-line no-unused-vars
         const {name, email, image, password} = data;
         reset();
 
@@ -29,7 +28,10 @@ const Register = () => {
                 displayName: name,
                 photoURL: image
             })
-             .then(console.log('profile updated'))
+             .then(() => {
+                setReload(true);
+                console.log('profile updated');
+             })
              .catch(err => console.log(err))
 
              toast.success('Registration successfully done');

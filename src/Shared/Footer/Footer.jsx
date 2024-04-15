@@ -10,15 +10,15 @@ import { FaGithub } from "react-icons/fa";
 const LINKS = [
   {
     title: "Product",
-    items: ["Overview", "Features", "Solutions", "Tutorials"],
+    items: ["Overview", "Features", "Solutions"],
   },
   {
     title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
+    items: ["About us", "Careers", "Press"],
   },
   {
     title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    items: ["Blog", "Newsletter", "Events"],
   },
 ];
  
@@ -30,11 +30,11 @@ const Footer = () => {
     return (
         <div>
             
-            <footer className="relative w-full bg-gray-100">
+            <footer className="relative w-full bg-black">
                 <div className="mx-auto w-full container pt-10 pb-1 text-center md:text-left">
                     <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
                         <div className="text-center md:text-left">
-                            <Link to={'/'} className="font-bold text-2xl md:text-3xl">Dream <span className="text-green-700">Vista</span></Link>
+                            <Link to={'/'} className="font-bold text-2xl md:text-3xl text-white">Dream <span className="text-green-700">Vista</span></Link>
                             <p className="pt-2 pb-2 md:pb-0 font-medium w-[270px] md:w-[250px] lg:w-[350px] mx-auto md:mx-0 text-gray-500 text-center md:text-left text-sm md:text-base">Explore our properties and find your dream home. Contact us for inquiries or to schedule a viewing.</p>
                         </div>
 
@@ -42,9 +42,7 @@ const Footer = () => {
                         {LINKS.map(({ title, items }) => (
                         <ul key={title}>
                             <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="mb-1 font-semibold md:text-xl opacity-60"
+                            className="mb-1 font-semibold text-gray-50 md:text-xl opacity-60"
                             >
                             {title}
                             </Typography>
@@ -64,17 +62,17 @@ const Footer = () => {
                         ))}
                     </div>
                     </div>
-                    <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-100 py-4 md:flex-row md:justify-between">
+                    <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-900 py-4 md:flex-row md:justify-between">
                     <Typography
                         variant="small"
-                        className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+                        className="mb-4 text-center font-normal text-gray-500 md:mb-0"
                     >
-                        &copy; {currentYear} <a href="https://material-tailwind.com/"><b>Dream Vista</b></a>. All
+                        &copy; {currentYear} <Link to={'/'}><b>Dream Vista</b></Link>. All
                         Rights Reserved.
                     </Typography>
 
 
-                    <div className="flex gap-4 text-black sm:justify-center">
+                    <div className="flex gap-4 text-white sm:justify-center">
                         <Typography as="a" href="https://www.facebook.com/" target="_blank" className="opacity-80 transition-opacity hover:opacity-100">
                             <FaSquareFacebook className="text-xl md:text-2xl lg:text-3xl"/>
                         </Typography>
