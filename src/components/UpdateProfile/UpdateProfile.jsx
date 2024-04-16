@@ -49,7 +49,7 @@ const UpdateProfile = () => {
                             </div>
                             <div className="text-center mt-2 md:mt-4">
                                 <p className="text-neutral-900 text-[14px] md:text-xl font-semibold">{user.displayName}</p>
-                                <p className="text-neutral-900 text-[14px] md:text-xl font-semibold">{user.email}</p>
+                                <p className="text-neutral-700 text-[14px] md:text-xl font-semibold">{user.email}</p>
                             </div>
                         </div>
 
