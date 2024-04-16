@@ -4,11 +4,11 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import { createBrowserRouter } from 'react-router-dom';
 import Contact from '../../src/components/Contact/Contact';
 import UpdateProfile from './../components/UpdateProfile/UpdateProfile';
-import FAQ from './../components/FAQ/FAQ';
 import Login from './../Pages/Login/Login';
 import Register from './../Pages/Register/Register';
 import EstateDetails from './../components/EstateDetails/EstateDetails';
 import PrivateRoute from './PrivateRoute';
+import Agents from './../components/Agents/Agents';
 
 
 
@@ -23,16 +23,16 @@ const router = createBrowserRouter([
           element: <Home></Home>
         },
         {
-          path: '/update',
-          element: <PrivateRoute><UpdateProfile/></PrivateRoute>
-        },
-        {
           path: '/contact',
           element: <Contact/>
         },
         {
-          path: '/faq',
-          element: <FAQ/>
+          path: '/agents',
+          element: <PrivateRoute><Agents/></PrivateRoute>
+        },
+        {
+          path: '/update',
+          element: <PrivateRoute><UpdateProfile/></PrivateRoute>
         },
         {
           path: '/login',

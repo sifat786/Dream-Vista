@@ -32,18 +32,6 @@ const Header = () => {
 
                         <li>
                             <NavLink
-                                to="/faq"
-                                className={({ isActive }) =>
-                                isActive
-                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-green-700"
-                                    : "md:text-lg text-black font-medium"
-                                }
-                            >FAQ
-                            </NavLink>
-                        </li>
-
-                        <li>
-                            <NavLink
                                 to="/contact"
                                 className={({ isActive }) =>
                                 isActive
@@ -51,6 +39,18 @@ const Header = () => {
                                     : "md:text-lg text-black font-medium"
                                 }
                             >Contact Us
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink
+                                to="/agents"
+                                className={({ isActive }) =>
+                                isActive
+                                    ? "md:text-lg font-bold  md:underline md:underline-offset-4 md:decoration-2 text-green-700"
+                                    : "md:text-lg text-black font-medium"
+                                }
+                            >Agents
                             </NavLink>
                         </li>
 
@@ -94,30 +94,30 @@ const Header = () => {
                 <div className="navbar-end gap-2">
                     {
                         loader ? <div className="flex items-center gap-2">
-                                    <p className="text-3xl text-black font-semibold">Loading</p>
-                                    <span className="loading loading-bars loading-lg mr-8"></span>
+                                    <p className="text-xl md:text-2xl lg:text-3xl text-black font-semibold">Loading</p>
+                                    <span className="loading loading-bars  loading-md lg:loading-lg mr-8"></span>
                                 </div>
 
                         :
 
                         <>
                             <div className={user ? 'tooltip tooltip-bottom' : ''} data-tip={user ? user.displayName : ''} role="button">
-                                <div className="w-10 md:w-[47px]">
+                                <div className="w-10 h-10 md:w-[47px] md:h-[47px] border-4 border-gray-600 rounded-full">
                                     {
                                         user?.photoURL === null ? 
-                                        <img className="rounded-full" src={userDefaultPic}/>
+                                        <img className="rounded-full w-full h-full" src={userDefaultPic}/>
                                         :
-                                        <img className="rounded-full" src={user ? user.photoURL : userDefaultPic}/>
+                                        <img className="rounded-full w-full h-full" src={user ? user.photoURL : userDefaultPic}/>
                                     }
                                 </div>
                             </div>
                             
                             {
                                 user ? 
-                                    <button onClick={handleLogout} className="bg-green-700 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log Out</button>
+                                    <button onClick={handleLogout} className="bg-green-700 hover:bg-green-900 duration-300 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log Out</button>
                                     :
                                     <Link to={'/login'}>
-                                        <button className="bg-green-700 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log In</button>
+                                        <button className="bg-green-700 hover:bg-green-900 duration-300 py-2 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Log In</button>
                                     </Link>
                             }
                         </>

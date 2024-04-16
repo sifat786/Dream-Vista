@@ -61,7 +61,7 @@ const EstateDetails = () => {
                             <MdMyLocation className='text-sm md:text-base'/>
                             <p className='text-sm md:text-base text-gray-700 font-medium'>{location}</p>
                         </div>
-                        <p className='mt-[-30px] md:mt-[-40px] lg:mt-[-55px] mr-4 text-base font-medium bg-black text-white pt-[2px] px-2'>${price}</p>
+                        <p className='mt-[-30px] md:mt-[-40px] lg:mt-[-50px] md:mr-4 text-base font-medium bg-black text-white pt-[4px] pb-[1px] px-3'>${price}</p>
                     </div>
                     <p className='text-sm md:text-base text-black font-normal md:w-[600px] lg:w-[800px]'><b>Review : </b>{description}</p>
 

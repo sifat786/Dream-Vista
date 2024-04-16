@@ -18,8 +18,8 @@ module.exports = withMT({
       center: true,
     },
     screens: {
-      'sm': '400px',
-      'md': '600px',
+      'sm': '360px',
+      'md': '700px',
       'lg': '1140px',
     },
 

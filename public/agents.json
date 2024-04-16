@@ -1,0 +1,32 @@
+[
+    {
+      "image": "https://i.ibb.co/S3HB8jT/one.png",
+      "name": "John Doe",
+      "placement": "Manager"
+    },
+    {
+      "image": "https://i.ibb.co/xJq1WnK/two.png",
+      "name": "Jane Smith",
+      "placement": "CEO"
+    },
+    {
+      "image": "https://i.ibb.co/syqc0sh/three.png",
+      "name": "Michael Johnson",
+      "placement": "Leader"
+    },
+    {
+      "image": "https://i.ibb.co/Hd4L34D/four.png",
+      "name": "Sarah Williams",
+      "placement": "Marketing"
+    },
+    {
+      "image": "https://i.ibb.co/BZgZG3L/five.png",
+      "name": "David Brown",
+      "placement": "Sales"
+    },
+    {
+      "image": "https://i.ibb.co/DRy8YGg/six.jpg",
+      "name": "Emily White",
+      "placement": "Development"
+    }
+  ]
