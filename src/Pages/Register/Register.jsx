@@ -52,9 +52,9 @@ const Register = () => {
             </Helmet>
             
 
-            <div className="text-center mt-5 md:mt-10 bg-green-50 py-8 md:py-10 lg:py-12 px-4 md:px-0 rounded-xl">
+            <div className="text-center mb-5 lg:mb-10 lg:mt-5 bg-green-50 py-8 md:py-10 lg:py-10 px-4 md:px-0 rounded-xl">
 
-                <div className="card md:w-[80%] lg:w-[50%] mx-auto md:py-[50px] lg:px-[50px]">
+                <div className="card md:w-[80%] lg:w-[50%] mx-auto md:py-[20px] lg:px-[50px]">
                     <h4 className="text-center text-neutral-700 text-[35px] font-semibold">Register</h4>
                     <p className="pt-2 font-medium md:w-[500px] mx-auto text-gray-500 text-center text-sm md:text-base">Sign up today to find your dream home! Register for free to receive personalized property listings, updates, and expert advice.</p>
                     <hr className=" border-black border-opacity-15 my-[20px] md:my-[30px]"/>
@@ -136,7 +136,7 @@ const Register = () => {
                             </span>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="bg-green-700 w-full py-3 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Register</button>
+                            <button className="bg-green-700 hover:bg-green-900 duration-300 w-full py-3 px-4 md:py-[9px] md:px-11 text-white md:text-xl font-medium rounded-lg">Register</button>
                         </div>
                     </form>
                     <p className="text-neutral-500 text-base font-semibold text-center mt-[10px]">Already Have an Account ?

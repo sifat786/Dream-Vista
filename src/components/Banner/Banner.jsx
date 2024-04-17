@@ -6,7 +6,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 
 const Banner = () => {
     return (
-        <div className="lg:mt-5 mb-6 md:mb-10">
+        <div className="mt-4 mb-6 md:mb-10">
 
             <Swiper
                 navigation = {true} 

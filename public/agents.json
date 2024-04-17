@@ -2,31 +2,72 @@
     {
       "image": "https://i.ibb.co/S3HB8jT/one.png",
       "name": "John Doe",
-      "placement": "Manager"
+      "jobTitle": "Manager"
     },
+
     {
       "image": "https://i.ibb.co/xJq1WnK/two.png",
       "name": "Jane Smith",
-      "placement": "CEO"
+      "jobTitle": "CEO"
     },
+
     {
       "image": "https://i.ibb.co/syqc0sh/three.png",
-      "name": "Michael Johnson",
-      "placement": "Leader"
+      "name": "Jenifar",
+      "jobTitle": "Leader"
     },
+
     {
       "image": "https://i.ibb.co/Hd4L34D/four.png",
       "name": "Sarah Williams",
-      "placement": "Marketing"
+      "jobTitle": "Marketing"
     },
+
     {
       "image": "https://i.ibb.co/BZgZG3L/five.png",
       "name": "David Brown",
-      "placement": "Sales"
+      "jobTitle": "Sales"
     },
+
     {
       "image": "https://i.ibb.co/DRy8YGg/six.jpg",
       "name": "Emily White",
-      "placement": "Development"
+      "jobTitle": "Development"
+    },
+
+    {
+      "image": "https://i.ibb.co/z8DhDxn/seven.jpg",
+      "name": "Ryan Taylor",
+      "jobTitle": "Finance"
+    },
+    
+    {
+      "image": "https://i.ibb.co/ns9QZz8/eight.jpg",
+      "name": "Olivia Adams",
+      "jobTitle": "Sales"
+    },
+
+    {
+      "image": "https://i.ibb.co/rMRVSRS/nine.jpg",
+      "name": "Daniel Lee",
+      "jobTitle": "Architecture"
+    },
+
+    {
+      "image": "https://i.ibb.co/Zf2GpDh/ten.jpg",
+      "name": "Sophia Clark",
+      "jobTitle": "Legal Affairs"
+    },
+
+    {
+      "image": "https://i.ibb.co/WDqLyZy/eleven.jpg",
+      "name": "Matthew Roberts",
+      "jobTitle": "Property Manager"
+    },
+
+    {
+      "image": "https://i.ibb.co/kMF09KQ/twelve.jpg",
+      "name": "Jessica Anderson",
+      "jobTitle": "Senior Sales"
     }
   ]

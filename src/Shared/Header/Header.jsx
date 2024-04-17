@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import userDefaultPic from '../../assets/userDefaultPic.png';
 import useAuth from './../../Hooks/useAuth';
 import { toast } from "react-toastify";
+import 'animate.css';
 
 
 const Header = () => {
@@ -82,7 +83,7 @@ const Header = () => {
                     </ul>
                     </div>
 
-                    <Link to={'/'} className="font-bold text-2xl md:text-3xl ml-3 lg:ml-0">Dream <span className="text-green-700">Vista</span></Link>
+                    <Link to={'/'} className="font-bold text-2xl md:text-3xl ml-3 lg:ml-0 animate__animated animate__backInDown">Dream <span className="text-green-700">Vista</span></Link>
                 </div>
 
                 <div className="navbar-center hidden lg:flex">
