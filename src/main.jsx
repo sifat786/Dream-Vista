@@ -6,6 +6,10 @@ import router from "./Router/Router";
 import AuthProvider from "./provider/AuthProvider";
 import { HelmetProvider } from "react-helmet-async";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(

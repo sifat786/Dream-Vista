@@ -12,18 +12,18 @@ const Estate = () => {
     return (
         <div className='mb-10 lg:pt-10'>
 
-            <h3 className='text-zinc-900 text-2xl md:text-3xl lg:text-4xl text-center font-semibold leading-9'>Luxurious Estates</h3>
-            <p className='md:pt-2 lg:pt-4 w-auto md:w-[500px] lg:w-[600px] m-auto text-center text-sm  md:text-base text-gray-900 font-medium'>Discover unparalleled elegance and sophistication in our luxury real estate listings. Explore exquisite properties in prime locations, crafted for those with discerning taste. Your dream home awaits. Experience luxury living today.</p>
+            <h3 className='text-zinc-900 text-2xl md:text-3xl lg:text-4xl text-center font-semibold leading-9' data-aos='fade-down' data-aos-duration='1000'>Luxurious Estates</h3>
+            <p className='md:pt-2 lg:pt-4 w-auto md:w-[500px] lg:w-[600px] m-auto text-center text-sm  md:text-base text-gray-900 font-medium' data-aos='fade-down' data-aos-duration='1000'>Discover unparalleled elegance and sophistication in our luxury real estate listings. Explore exquisite properties in prime locations, crafted for those with discerning taste. Your dream home awaits. Experience luxury living today.</p>
             
             <div className='mt-5 md:mt-[30px] lg:mt-[40px] grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 space-y-4 md:space-y-0'>
 
                 {
-                    data.map((info, idx) => {
+                    data?.map((info, idx) => {
 
                         const { id, estate_title, image, location, status, bedRoom, shower, area, price } = info;
 
                         return (
-                            <div key={idx} className='w-auto md:w-[338px] lg:w-[420px] relative'>
+                            <div key={idx} className='w-auto md:w-[338px] lg:w-[420px] relative' data-aos='fade-up' data-aos-duration='1000'>
                                 <img className='w-auto md:w-[338px] lg:w-[420px] h-auto md:h-[180px] lg:h-[250px] rounded-t-xl object-cover' src={image} />
                                 <div className='py-1 px-3 bg-red-700 absolute top-4 right-3 rounded-md'>
                                     <p className='text-[16px] font-medium text-white'>{status}</p>

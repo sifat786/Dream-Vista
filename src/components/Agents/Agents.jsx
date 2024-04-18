@@ -19,8 +19,8 @@ const Agents = () => {
                 <title>Dream Vista | Agents</title>
             </Helmet>
             
-            <h3 className='text-zinc-900 text-2xl md:text-3xl lg:text-4xl text-center font-semibold leading-9 mt-5'>Our Exclusive Agents</h3>
-            <p className='md:pt-2 lg:pt-4 w-auto md:w-[500px] lg:w-[600px] m-auto text-center text-sm  md:text-base text-gray-900 font-medium'>Meet our dedicated agents who excel in personalized service, expertise, and integrity. Your trusted partners in real estate success.</p>
+            <h3 className='text-zinc-900 text-2xl md:text-3xl lg:text-4xl text-center font-semibold leading-9 mt-5' data-aos='fade-down' data-aos-duration='1000'>Our Exclusive Agents</h3>
+            <p className='md:pt-2 lg:pt-4 w-auto md:w-[500px] lg:w-[600px] m-auto text-center text-sm  md:text-base text-gray-900 font-medium' data-aos='fade-down' data-aos-duration='1000' data-aos-delay='1000'>Meet our dedicated agents who excel in personalized service, expertise, and integrity. Your trusted partners in real estate success.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-6 lg:mt-8 mb-[40px] lg:mb-[100px]">
                 {
@@ -28,7 +28,7 @@ const Agents = () => {
                         const {image, name, jobTitle} = item || {};
 
                         return (
-                            <div key={idx} className="flex flex-col justify-center items-center p-6 shadow-lg rounded-xl sm:px-12 bg-gray-100 text-gray-900">
+                            <div key={idx} className="flex flex-col justify-center items-center p-6 shadow-lg rounded-xl sm:px-12 bg-gray-100 text-gray-900" data-aos='zoom-in' data-aos-duration='1000' data-aos-delay='1000'>
                                 <div>
                                     <img src={image} alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square object-cover" />
                                     <div className="space-y-4 text-center divide-y divide-gray-300">

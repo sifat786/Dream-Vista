@@ -68,6 +68,7 @@ const Register = () => {
                                 type="text" 
                                 placeholder="Enter your name" 
                                 className="input mb-2"
+                                required
                                 {...register("name")}
                             />
                         </div>
@@ -99,8 +100,9 @@ const Register = () => {
                                 <span className="label-text text-center text-neutral-700 text-base md:text-xl font-semibold">Photo URL</span>
                             </label>
                             <input 
-                                type="url" 
-                                placeholder="Enter your photo url" 
+                                type="url"
+                                placeholder="Enter your photo url"
+                                required
                                 className="input mb-2"
                                 {...register("image")}
                             />
@@ -112,7 +114,7 @@ const Register = () => {
                             </label>
                             <input type={showPassword ? 'text' : 'password' }
                                 placeholder="Enter your password" 
-                                className="input mt-1"
+                                className="input mt-1 mb-2"
                                 {...register("password", {
                                     required: {
                                         value: true,

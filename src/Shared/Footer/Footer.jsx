@@ -65,14 +65,14 @@ const Footer = () => {
                     <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-900 py-4 md:flex-row md:justify-between">
                     <Typography
                         variant="small"
-                        className="mb-4 text-center font-normal text-gray-500 md:mb-0"
+                        className="mb-4 text-center font-normal text-gray-500 md:mb-0 animate__animated animate__backInUp"
                     >
                         &copy; {currentYear} <Link to={'/'}><b>Dream Vista</b></Link>. All
                         Rights Reserved.
                     </Typography>
 
 
-                    <div className="flex gap-4 text-white sm:justify-center">
+                    <div className="flex gap-4 text-white sm:justify-center animate__animated animate__backInUp">
                         <Typography as="a" href="https://www.facebook.com/" target="_blank" className="opacity-80 transition-opacity hover:opacity-100">
                             <FaSquareFacebook className="text-xl md:text-2xl lg:text-3xl"/>
                         </Typography>

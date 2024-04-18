@@ -33,9 +33,9 @@ const EstateDetails = () => {
                 <title>{estate_title}</title>
             </Helmet>
 
-            <h3 className='text-zinc-900 text-2xl md:text-3xl lg:text-4xl text-center font-semibold leading-9'>{estate_title} Details</h3>
+            <h3 className='text-zinc-900 text-2xl md:text-3xl lg:text-4xl text-center font-semibold leading-9' data-aos='fade-down' data-aos-duration='2000'>{estate_title} Details</h3>
 
-            <div className="rounded-[5px] border border-neutral-200 p-[15px] md:p-[20px] lg:p-[30px] mt-2 md:mt-5">
+            <div className="rounded-[5px] border border-neutral-200 p-[15px] md:p-[20px] lg:p-[30px] mt-2 md:mt-5" data-aos='zoom-in' data-aos-duration='2000' data-aos-delay='1000'>
                 <img className='w-auto h-auto md:w-[600px] md:h-[300px] lg:w-[800px] lg:h-[420px] rounded-[5px]' src={image} />
 
                 <div className="flex items-center bg-zinc-100 p-2 md:p-4 w-[300px] md:w-[600px] lg:w-[800px]">
